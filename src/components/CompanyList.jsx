@@ -1,18 +1,14 @@
-import React, { useState, useEffect } from 'react';
-// import { Button } from '@mui/material';
-import Card from "@mui/material/Card";
-import { CardContent } from "@mui/material";
-import { API } from '../global';
-// import { Navigate } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { API } from "../global";
 const CompanyList = () => {
-    const [ companyInfo, setCompanyInfo ] = useState([]);
-    console.log(companyInfo);
-    const getCompanies = () => {
-        fetch(`${API}/api/companies/getcompany`, { method: "GET" })
-          .then((data) => data.json())
-          .then((companiesdetail) => setCompanyInfo(companiesdetail));
-    }
-      useEffect(() => getCompanies(), []);
+  const [companyInfo, setCompanyInfo] = useState([]);
+  console.log(companyInfo);
+  const getCompanies = () => {
+    fetch(`${API}/api/companies/getcompany`, { method: "GET" })
+      .then((data) => data.json())
+      .then((companiesdetail) => setCompanyInfo(companiesdetail));
+  };
+  useEffect(() => getCompanies(), []);
   return (
     <>
       <div className="container" style={{ minHeight: "100%" }}>
@@ -26,12 +22,8 @@ const CompanyList = () => {
 
                   <h4 className="movie-summary">{cmp.name}</h4>
                   <p>
-                    {cmp.address}, {cmp.district}, {cmp.city}- {cmp.pincode}
+                    {cmp.address}, {cmp.district}, {cmp.city} - {cmp.pincode}
                   </p>
-
-                  {/* <p className="movie-summary">{cmp.district}</p> */}
-                  {/* <p className="movie-summary">{cmp.city}</p>
-                <p className="movie-summary">{cmp.pincode}</p> */}
                   <p>{cmp.phone}</p>
                   <p>{cmp.email}</p>
                 </div>
@@ -42,6 +34,6 @@ const CompanyList = () => {
       </div>
     </>
   );
-}
+};
 
-export default CompanyList
+export default CompanyList;

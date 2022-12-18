@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import { API } from "../../global";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import "./login.css";
+
 export default function Login() {
   const navigate = useNavigate();
 

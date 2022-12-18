@@ -2,7 +2,7 @@ import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 import * as React from "react";
 import TextField from "@mui/material/TextField";
-import './register.css';
+
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
 

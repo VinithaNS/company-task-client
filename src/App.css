@@ -29,11 +29,17 @@
     font-weight: bold;
     color: white;
 }
+.logo-image{
+  padding: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
 .logo{
-    height: 70px;
-    width: 70px;
-    object-fit: contain;
-    border-radius: 50%;
+    height: 50px;
+      width: 50px;
+      object-fit: contain;
+      border-radius: 50%;
+   
 }
 .company-header{
     display: flex;
@@ -55,10 +61,6 @@
     line-height: 24px;
     color: #044D72;
 }
-/* .company-title{
-  align-self: center;
-} */
-
 .screen-container{
     background-color: bisque;
     min-height: 100vh; 
